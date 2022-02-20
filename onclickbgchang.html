@@ -1,0 +1,83 @@
+<!--project onclick Background Changer  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+ body{
+     margin: 0px;
+     padding: 20px 100px;
+ }
+ h1{
+     text-align: center;
+     text-decoration: underline;
+ } 
+ img{
+     width: 100%;
+     height: auto;
+     margin: 0 auto;
+ }
+ p{
+     font-size: 30px;
+     text-align: justify;
+ }
+ .btn{
+     width: 20px;
+     height: 20px;
+     display: inline-block;
+     border: solid grey 2px;
+     border-radius: 50%;
+     cursor: pointer;
+ }
+ #white{
+background-color: white;
+ }
+ #aqua{
+background-color: aquamarine;
+ }
+ #voilet{
+background-color:green;
+ }
+ #black{
+    background-color: black; 
+ }
+ #color-switecher{
+     text-align: right;
+ }
+    </style>
+</head>
+<body>
+    <div id="color-switecher">
+    <span class="btn" id="white"onclick="changeBG('#ffffff')"></span>
+    <span class="btn" id="aqua"onclick="changeBG('#7fffd4')"></span>
+    <span class="btn" id="violet"onclick="changeBG('#ce9aff')"></span>
+    <span class="btn" id="black"onclick="changeBG('#000000')"></span>
+    </div>
+    <h1 class="text">About Us</h1>
+    <img src="https://wallpaperaccess.com/full/427852.jpg" alt="">
+   <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga quos deleniti unde dolor? Optio odit quod voluptate culpa nemo, atque quae ullam? Maxime cum temporibus ipsam dolorum velit eos quod illo ab magnam ratione unde sint in est commodi tenetur earum accusantium, officia odit dolore iusto sequi obcaecati ut rerum cupiditate! Eius adipisci minus sed mollitia rem voluptatibus dolorem, odit odio voluptas voluptates dolorum tenetur fugiat quam laudantium neque. Quasi, voluptatibus illum sequi ab harum autem ipsa? Reiciendis saepe praesentium obcaecati quia nulla corporis ea molestiae rem temporibus, autem quod incidunt architecto quisquam, quam, eveniet maxime? Impedit perspiciatis accusantium voluptatum eum mollitia exercitationem aliquid nemo necessitatibus est adipisci, ipsam totam magni quidem voluptatibus tempora, officiis illum fugiat distinctio nostrum ut commodi labore cum optio iste? Reiciendis libero nobis modi omnis vel quo ipsum eligendi facilis iusto delectus, sunt laborum architecto natus fugiat dignissimos. Explicabo, vero architecto. Quasi quia laudantium commodi omnis expedita eius, numquam eos excepturi, labore alias est. Commodi illum impedit sequi explicabo laboriosam esse fugiat, quae molestiae, animi dolorem sapiente eius quo itaque doloribus nisi debitis velit cum eos aliquid. Rerum id repudiandae commodi eaque necessitatibus recusandae delectus sed nisi sunt hic doloremque, maiores explicabo totam impedit ratione dolore error incidunt, non maxime molestias quod est. Sunt sed labore tenetur sit consequuntur. Incidunt quam adipisci debitis dignissimos nemo veritatis eum distinctio, vel exercitationem deserunt quibusdam dolor laborum saepe provident temporibus possimus nesciunt tempore natus inventore amet obcaecati. Nesciunt ex incidunt minima suscipit a optio officia similique sint, sapiente aperiam sequi dolorum quidem iusto dolore deleniti, cum magni perferendis pariatur delectus voluptas quisquam. Nemo quae architecto magni quia fugiat nobis voluptatum pariatur veritatis soluta ipsa, natus, suscipit molestias, similique voluptatibus debitis atque reiciendis. Animi accusamus quidem numquam voluptas cum cumque tenetur id atque in sit voluptatem, similique quae minima sapiente mollitia temporibus obcaecati aspernatur qui illum tempora distinctio delectus labore recusandae? Animi, officia optio facere aliquid nostrum laudantium, molestiae, sint porro laborum magni cum dolorem minima veniam numquam. Libero neque eaque, odio, illum distinctio maiores vero ab porro molestiae, modi voluptatem necessitatibus! Ad, deleniti reprehenderit, corporis odio eaque illum at ratione minus, reiciendis veritatis nam nobis sunt? Amet fugit nostrum esse fugiat velit, molestias sequi obcaecati ducimus dolorum labore animi perferendis ipsum laboriosam, asperiores reiciendis maiores facere voluptatibus error saepe provident deserunt officia. Minima quaerat assumenda voluptatum in quisquam sapiente reiciendis ea quas. Soluta tempore laudantium perferendis, quos consequatur, sequi eligendi in, facilis dolorum iure nisi necessitatibus eius quidem dolore vel nemo. Cumque expedita ipsa aliquam facere vitae recusandae porro assumenda quidem, exercitationem suscipit dignissimos saepe. Veniam, est in? Laudantium beatae tempore quibusdam inventore ratione odio explicabo earum optio eaque est. Hic ipsum dolore quae, quos quis distinctio similique harum amet asperiores animi quasi ipsam quibusdam doloribus id omnis qui sint libero totam sequi itaque. Ipsa saepe placeat veniam earum hic vel, quaerat nisi. Cupiditate doloribus quibusdam temporibus nulla at libero voluptatem sit dolorum earum vel. Maxime sint iusto architecto amet deleniti nesciunt quidem reiciendis, earum ullam reprehenderit veniam.
+
+    </p>
+    <script>
+        function changeBG(color){
+            document.body.style.backgroundColor=color;
+            let txt= document.getElementsByClassName("text");
+            if(color=="#000000"){
+               for(let elm of txt){
+                   elm.style.color="white";
+               }
+               }else{
+                for(let elm of txt){
+                   elm.style.color="black";
+
+               }
+               }
+            }
+    
+       
+    </script>
+</body>
+</html>

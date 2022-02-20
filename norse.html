@@ -1,0 +1,602 @@
+<!-- 1 M/d   through this way get the html  document.
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>List 1</li>
+        <li id="first">List 2</li>
+        <li>List 3</li>
+    </ul>
+<script>
+   let elm= document.getElementById("first");
+   console.log(elm.innerHTML);
+</script>
+</body> -->
+---------------------------------------------
+<!--how to set the document in html
+</html> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>List 1</li>
+        <li id="first">List 2</li>
+        <li>List 3</li>
+    </ul>
+    <script>
+        let elm= document.getElementById("first");
+        elm.innerHTML="<p>Hellow</p>";
+     </script>
+</body>
+</html> -->
+-----------------------------------------
+ <!--3 M/d select an element through the select element by "Class Name" -->
+<!-- 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     <ul>
+         <li class="cl pi">List 1</li>
+         <li id="first">List 2</li>
+         <li class="cl">List 3</li>
+     </ul>
+     <script>
+         let elm= document.getElementsByClassName("cl pi");//because ye dono class sirf isi me pada hua hai
+ for(i=0;i<elm.length;i++){
+     elm[i].innerHTML="<p>Hellow</p>";
+  
+ }
+         // elm.innerHTML="<p>Hellow</p>";
+         // console.log(elm.length);
+      </script>
+ </body>
+ </html> -->
+ _____________________________________________________________
+<!--//4 m/d is access element by "className"and element by "getElementsByTagName"
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="cl pi">List 1</li>
+        <li id="first">List 2</li>
+        <li class="cl">List 3</li>
+    </ul>
+    
+        <h2>heading 1</h2>
+        <p>paragraph 1</p>
+        <h2>heading 2</h2>
+        <p>paragraph 2</p>
+        <h2>heading 3</h2>
+        <p>paragraph 3</p>
+    
+    <script>
+        let elm=document.getElementsByTagName("h2");
+        for(i=0;i<elm.length;i++){
+            elm[i].innerHTML="Usama is a good boy ";
+        }
+        // console.log(elm.length);
+        
+    //     for(i=0;i<elm.length;i++){
+    // elm[i].innerHTML="Hellow";
+    //     }
+        //this method is used in class
+//         let elm= document.getElementsByClassName("cl pi");//because ye dono class sirf isi me pada hua hai
+// for(i=0;i<elm.length;i++){
+//     elm[i].innerHTML="<p>Hellow</p>";
+ 
+// }
+//         // elm.innerHTML="<p>Hellow</p>";
+        // console.log(elm.length);
+     </script>
+</body>
+</html> -->
+
+--------------------------------------
+
+<!-- iske throgh ham value get bhi kar sakte hai set bhi kar sakte hai document.getElementById();
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h" >hello</h1>
+</body>
+<script>
+ let usama=document.getElementById("h");
+usama.innerHTML="mohd usama";
+// console.log(usama.innerHTML);
+    
+</script>
+</html> -->
+
+--------------------------------------
+<!--document.getElementbyclassName(); ham iske through bhi inner html ko change kare sake hai.
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="cl pi"> List 1</li>
+        <li> List 2</li>
+        <li class="cl"> List 3</li>
+    </ul>
+
+
+<script>
+ let usama=document.getElementsByClassName("cl pi");
+for(i=0;i<usama.length;i++){
+    usama[i].innerHTML="usama";
+}
+    
+</script>
+</body>
+</html>  -->
+---------------------------------------------
+<!-- select the element through the getelement byTagName();
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="cl pi"> List 1</li>
+        <li> List 2</li>
+        <li class="cl"> List 3</li>
+    </ul>
+    <h2>heading 1</h2>
+    <div id="div1">
+    <P>paragraph 1</P>
+    <h2>heading 2</h2>
+    <P>paragraph 2</P>
+    <h2>heading 3</h2>
+    <P>paragraph 3</P>
+</div>
+
+
+<script>
+ let div1=document.getElementById("div1");
+let usama=div1.getElementsByTagName("h2");
+for(i=0;i<usama.length;i++){
+    usama[i].innerHTML="usama";
+}
+    
+</script>
+</body>
+</html>  -->
+
+
+
+-----------------------------
+<!-- query selector in js access the html element througth the query selector and query selector all
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="intro">heading 1</h2>
+    <div id="div1">
+        <p class="intro">heading 2</p>
+        <p>paragraph 2</p>
+        <h2>heading 3</h2>
+        <p class="intro">paragraph 3</p>
+    </div>
+    <script>
+        let elm=document.querySelectorAll("p.intro");
+        // elm.innerHTML="hellow";ab ye kam nahi karega kiyoki collection ban giya hai ye sirt query selector me kar karega kiyoki wo jo satisfy phele hog use ko select karke de de ga
+        // console.log(elm);
+        for(i=0;i<elm.length;i++){
+            elm[i].innerHTML="usmaa";
+        }
+    </script>
+</body>
+</html>
+      -->
+----------------------------------------
+
+
+      <!-- //Traversing Elements in javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>heading 1</h2>
+  <ul>
+      <li>list 1</li>
+      <li id="intro">list 2</li>
+      <li>list 3</li>
+      <li>list 4</li>
+
+  </ul>
+  <ul>
+      <li>list a</li>
+      <li>list b</li>
+      <li>list c</li>
+      <li>list d</li>
+  </ul>
+    <script>
+        let elm=document.getElementById("intro");
+        // let usama=elm.previousElementSibling;
+        let usama=elm.nextElementSibling;//agar previous element karna yah prevois likhege agar next element select karna hai to yaha par next likhegi.
+        // let usama=elm.firstElementChild;
+        // let usama=elm.lastElementChild;
+        // console.log(usama);
+        // let prt=elm.parentElement;//ye hai parent selecter is tareke se parent ko select karte hai
+        // // prt.innerHTML="usama";
+        // console.log(prt);
+        console.log(usama);
+    </script>
+
+</body>
+</html> -->
+
+
+
+-------------------------------------------------
+<!--fetch the innerHtml and change the inner Html throuth the innerHtml
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="intro">
+        <p>Hello this is a p tag</p>
+    </div>
+    <script>
+        // let usama=document.getElementById("intro");
+        // let content=usama.innerHTML;//acces and fectch the inner Html
+        // console.log(content);
+        // how to change the inner html
+       let usama=document.getElementById("intro");
+       usama.innerHTML="mohd usama";
+    </script>
+</body>
+</html> -->
+
+
+
+---------------------------------------------------------------------
+<!--  append and add new text in inner Html and add classname and id and add the content in inner html
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="intro">
+        <p>Hello this is a p tag</p>
+    </div>
+    <script>
+
+       let usama=document.getElementById("intro");
+       let h1=document.createElement('h1');
+       h1.className="try pi";
+       h1.id="intro";
+    //    let text=document.createTextNode("this is mohd usama");
+    //    h1.appendChild(text);
+    //    usama.appendChild(h1);//append new hi in the html
+//  document.body.appendChild(h1);//body me add kar sate hai h1 tag
+h1.textContent="content added";
+document.body.appendChild(h1);//isse body me content ajayega h1
+    </script>
+</body>
+</html>  -->
+
+
+---------------------------------------------------------------------<!--how to insert new itme in html 
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>lst 1</li>
+        <li>lst 2</li>
+        <li>lst 3</li>
+        <li>lst 4</li>
+    </ul>
+    <script>
+let list1=document.getElementById("list");
+let item=document.createElement("li");
+item.textContent="new list 5";
+list1.appendChild(item);//through this way insert the new item in html
+
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+---------------------------------------------------------------------
+<!--  
+    
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+         //yaha par agar ya kahi par bhi new item add karna ho to insertBefore functiion ka use karte hai.
+        <li>lst 1</li>
+
+        <li>lst 2</li>
+ 
+        <li>lst 3</li>
+        
+        <li>lst 4</li>
+    </ul>
+    <script>
+// let list1=document.getElementById("list");//parent selected
+// let item=document.createElement("li");
+// item.textContent="new list 5";
+// // let pos=list1.firstElementChild;//iss first wala select ho jayega
+// // let pos=list1.firstElementChild.nextElementSibling;//isse first ke next wala select ho jayega
+// let pos=list1.firstElementChild.nextElementSibling.nextElementSibling;
+// list1.insertBefore(item,pos);//agar item upar add karna hai to kahi bhi add karna hia to insert before ka use karke kar sakte hai
+let parent=document.body;
+let usama=document.createElement("h2");
+usama.textContent="this is new element";
+let list =document.getElementById("list");
+parent.insertBefore(usama,list);//body ke andar aise element add karte hai
+    </script>
+</body>
+
+</html>   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+<table border="70">
+<tr>
+    <th>phone no</th>
+    <th>Email Id</th>
+</tr>
+<tr>
+    <td>9927044183</td>
+    <td>mohd.usama.engineer@gmail.com</td>
+   
+</tr>
+<tr>
+    <td>9927044183</td>
+    <td>mohd.usama.engineer@gmail.com</td>
+   
+</tr>
+<tr>
+    <td>9927044183</td>
+    <td>mohd.usama.engineer@gmail.com</td>
+   
+</tr>
+
+</table>
+</body>
+</html> -->
+  <!-- <h2>Javascript to change font size</h2>
+ <p id="fontId">Hello world!!!</p> 
+
+     <div class="parent_div">
+        <div class="child_div">
+            <h1>Welcome to master CSS Class</h1>
+        
+    </div>
+    </div> 
+     <iframe  src="photo (2).jpg"height="500px" width="500px"></iframe> 
+</body>
+</html> 
+
+-->
+
+
+
+
+
+
+
+<!-- how to delete the element in js Remove child element
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>Product</li>
+        <li>About us</li>
+
+    </ul>
+    <script>
+        let parent=document.getElementById("menu");
+        let usama=parent.firstElementChild.nextElementSibling;
+        console.log(usama);
+        // parent.removeChild(usama);
+        document.body.removeChild(parent);
+    </script>
+</body>
+</html> -->
+
+
+-------------------------------------------------
+<!-- clone in html elements throuth the javascript
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>Product</li>
+        <li>About us</li>
+
+    </ul>
+    <script>
+        let menu=document.getElementById("menu");
+        let clone=menu.cloneNode(true);//agar false karege to bas one ul id ="menu" </ul> bas ye hi ayega
+       clone.id="mobile";//isse id change kar dege 
+        // console.log(clone);
+        document.body.appendChild(clone);
+    </script>
+</body>
+</html> -->
+---------------------------------------------------------
+<!-- replace the html element through the js
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>Product</li>
+        <li>About us</li>
+
+    </ul>
+    <script>
+        let menu=document.getElementById("menu");
+        let item=document.createElement("li");
+        item.textContent="Services";
+        let replace=menu.firstElementChild.nextElementSibling;
+        menu.replaceChild(item,replace); 
+    </script>
+</body>
+</html> -->
+
+
+
+
+---------------------------------------------------------------------
+<!-- This is very power full method insertAdjacent Html isse ham charo side me insert kar sakte hai isse charo jagah add kar sakte hai
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+       //beforebegin
+       <div id="intro">
+           <h2>Heading</h2>
+           <p>this is a p tag</p>
+          // beforeend
+       </div>
+       //afterend
+       <script>
+           let usama=document.getElementById("intro");
+           let html="<h1>New h1</h1>";
+        usama.insertAdjacentHTML('beforeend',html);//isse new h1 add ho jayega end hone se pehle
+      </script>
+    </body>
+</html> -->

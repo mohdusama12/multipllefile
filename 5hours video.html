@@ -1,0 +1,663 @@
+<!--change attribute through javascript
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn"name="form1">send</button>
+    <script>
+        let usama=document.getElementById("btn");// is tarike se naya attribute kisi bhi button me add kar sakte hai
+        // btn.setAttribute("name","form1");//throgh this function set the attribute in the button
+    //    let val= usama.getAttribute("name");//is fucntion ham kisi bhi attribut  ki value dekh sakte hai
+    //    console.log(val);//get attribute se kisi attribute ka value get kar sakte hai
+        
+      //how to remove attribute
+    //   let val=btn.removeAttribute("name");//through this fuction remove the attribute
+
+// let val=btn.hasAttribute("name");//attribute check karne ke liye hasAttribute lagate hai agar hoga to true return karega and nahi hoga to false return karega
+// let val=btn.hasAttribute("value");//false return karega kiyoki value attribute nahi hai
+console.log(val);
+        </script>
+</body>
+</html> -->
+
+
+-----------------------------------------------
+ <!-- inline style change through javascript 
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn"name="form1">send</button>
+    <script>
+        let usama=document.getElementById("btn");
+        //  usama.style.cssText="background-color:red;color:white;";//aise style karte hai apko jitne bhi style lagane hai vo kotation ke andar add karte chale jao multiple color lagana hai to ye use karte hai
+// btn.setAttribute('style','color:white; background-color:red;');//this is second way to change the style 
+// usama.style.color="red";//3rd way to set eh attribute set the colour
+//    usama.style.background="green"; //single karna hai to ye karte hai
+       
+       
+        </script>
+</body>
+</html>-->
+
+
+
+
+
+
+------------------------------------------------------
+<!-- get computed css 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            background-color:red;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn"name="form1"style="color:blue">send</button>//ye color a jayega kiyoki inline ki priority jada hote hai
+</body>
+<script>
+    let mohd=document.getElementById("btn");
+    let css=getComputedStyle(btn);//isse dekh sakte hai kiya kia css laga hai
+    console.log(css.color);
+</script>
+</html>-->
+
+
+
+
+
+
+
+
+---------------------------------------------------------
+<!-- CSS Clasees 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+      .color{
+          background-color: grey;
+          color:yellow;
+      }
+      .dim{
+          border: 5px solid red;
+          padding:100px;
+      }
+  </style>
+      
+</head>
+<body>
+<div id="box"class="color dim">
+<p> this is a  dummy text!</p>
+</div>
+</body>
+<script>
+    let usama=document.getElementById("box");
+    // usama.classList.replace("color","dim");//aise ham kisi bhi class ko replace kar sakte hai
+    // usama.classList.remove("dim");//aise new class add kar sakte hai ham remove bhi kar sakte hai dim hatana hai to remove likhege
+// console.log(usama.className);//aise class ke name ko dekh sakte hai 
+//    usama.className+=" dim //isme naya class is tarah se append and add karenge
+//console.log(box.classList);//aise ham sare class dekh sakte hai
+// for(let css of usama.classList){//loop ke through bhi ham jan sakte hai kon kon sa colour hamara laga hua hai
+//     console.log(css);
+// }
+// let result=box.classList.contains("color");//aise check kar sakte hai hamare parr color class hai ya nahi hai to true dikhayega nahi hai to false dikhayega
+// console.log(result);
+
+
+// usama.classList.toggle("dim");//ye ulta kar dega agar dim class laga hua hai to usko hata do agar nahi laga hai to usko laga do
+</script>
+</html>-->
+
+
+
+--------------------------------------------------------------
+<!-- Width and Height of an Element in javascript 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+      .color{
+          background-color: grey;
+          color:yellow;
+      }
+      .dim{
+          border: 5px solid red;
+          padding:100px;
+      }
+  </style>
+      
+</head>
+<body>
+<div id="box"class="color dim">
+<p> this is a  dummy text!</p>
+</div>
+</body>
+<script>
+    //how to know width and Height through the javascript aik hota hai offset and aik client hota hai
+    let usama=document.getElementById("box");
+    // let width =box.offsetWidth;//ye hamara offset width hai border aur padding dono include ho raha hai
+//    let Height=box.offsetHeight;
+let width =box.clientWidth;//isne bina border ke lagaye conclude karke de diya
+let Height=box.clientHeight;
+    console.log(width);
+    console.log(Height);
+
+
+</script>
+</html>-->
+
+
+
+----------------------------------------------------------------
+ <!-- DOM Event:=>Dom events are actions that occur as a result of the user action or as result of state change of the elements of a DOM  tree 
+Examples of HTML Events
+1 When a use clicks the mousa
+2 When a web page has loaded
+3 when an image has been loaded
+4 when the mouse moves over and element
+5 when and input field is changed
+6 when and HTML for is sumbitted
+7 When a user strokes a key
+ 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+      
+</head>
+<body>
+
+<button id="btn">click me !</button>//how to add event listener 
+
+     <button id="btn" onClick="btnClick()">click Me!</button>//run the code call to the onclick(); function then function run after clicking the button show the alert button was clcked  
+    this the onclick method 
+</body>
+<script>
+ function btnClick(){
+      alert("button was clicked!");
+ }
+ let usmaa=document.getElementById("btn");
+//  usmaa.addEventListener('click',btnClick);//is tarah se ham event listener laga sakte hai and state change kar sakte hai onclick method use kar sakte hai
+btn.addEventListener('click', function(){//ham anonymus function use kar sakte bhi event listener laga sakte hai
+    alert("btn was clicked");
+})
+
+
+//jo event ka name hai wo kotation me rahega aur jo aur jo function ka name hai wo bina kotation me rahega
+</script>
+</html> --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------
+<!-- how to add multiple event in one element 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click Me!</button>
+    <script>
+        let btn=document.getElementById("btn");
+        btn.addEventListener('click',function(){
+            console.log("btn was clicked");
+        });
+        btn.addEventListener('mouseover',function(){
+            console.log("moouse over is activated");
+        });
+        btn.addEventListener('mouseout',function(){
+            console.log("mouse out is activated");
+        });//aik he button par hamne 3 event laga diye aur wo kam akr rahe hai
+    </script>
+</body>
+</html> -->
+
+------------------------------------------------------
+<!-- remove eventlistener 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click Me!</button>
+    <script>
+        let usama=document.getElementById("btn");  
+        function click1(){
+            console.log("click 1 activated");
+        }
+        function click2(){
+            console.log("click 2 activated");
+        }
+        usama.addEventListener('click',click1,);
+        usama.addEventListener('click',click2,);
+         usama.removeEventListener('click',click2);//this is remove fucntion click 2 is removed
+    </script>
+</body>
+</html>-->
+
+
+
+------------------------------------------------------<!-- Page Load Events
+    DOMCONTENTLOaded->the browser fully loaded HtML and completed building the COM tree. Hweber, it hasn't loaaded external
+    resources like stylesheets and images. in this event, you can start selecting DOM
+    nodes or initialize the interface.
+    
+    
+    2 load->the browser fully loaded the HTML and also external resources like images and stylesheets.
+    When you leave the page, the folowing events fire in sequence:
+    
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+       <img  id="image1"width="500"Height="500" src="https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/08/hug-kiss-images.jpg">
+        <script>
+     window.addEventListener('DOMContentLoaded',function(){
+         console.log("DOM tre created");
+     })
+    
+     let img=document.getElementById("image1");
+     img.addEventListener('load',function(){
+         console.log("fully loaded");
+     })
+     //load function ham chahe to particular element par bhi laga sakte hai to ham aik element ya kisi window par laga sakte hai
+        </script>
+    </body>
+    </html>-->
+
+
+    --------------------------------------------------------------
+    <!-- Mouse event 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width:100px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+ <div id="box" oncontextmenu="fun()">//agar right side ke batton ke click hone par koi event add karna hai to uske liye onctextmenu likhna padta hai 
+<div id="box" ondblclick="fun()">//ye double click karne par use hota hai 
+ <div id="box" onmousedown="fun()">//ye button par click hone ke bad occur hota hao use tarah se aik onmouseup hota hai aur aise he onmouseover hota hai 
+
+<div id="box" onmouseover="fun()"></div>//aik onmouseout ata hai bahar ate he activate ho jayaga
+
+
+    <script>
+        function fun(){
+            alert("double click event");
+        }
+    </script>
+
+</body>
+</html>-->
+
+
+------------------------------------------------------
+<!-- key down event in js 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #box{
+        height: 200px;
+        width: 200px;
+        background-color: aqua;
+        
+    }
+</style>
+</head>
+<body>
+    <div id="box">
+      
+
+    </div>
+    <script>
+          window.addEventListener('keyup', checkkey);//keydown 
+        function checkKey(event){
+            console.log(event.key);
+        }
+    </script>
+</body>
+</html>-->
+
+
+------------------------------------------------------
+<!-- Scroll Events
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        height: 2000px;
+      
+        
+    }
+</style>
+</head>
+<body>
+  <h1>hellow</h1>
+  </body>
+    <script>
+          window.addEventListener('wheel',function(){//with the help  scroll  of this function see the scrolling in the console
+          if(event.deltaY<0){
+              console.log("scrolling up..");
+          }
+          else if(event.deltaY>0){
+              console.log("scrolling down..");
+          }
+          
+          }); 
+       
+        
+    </script>
+</body>
+</html>-->
+
+
+-----------------------------------------------------------------------
+<!-- is tareke se detect kar sakte hai kab user ja raha and
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="myinput">
+    </form>
+    <script>
+     let x=document.getElementById("myinput");
+     
+     x.addEventListener('focus', myFocusFunction);
+     x.addEventListener('blur', myBlurFuction);
+     x.addEventListener('input', function(){//jo bhi input ke andar change hoga sab detect ho jayega
+         console.log(this.value);
+     });
+
+     function myFocusFunction(){
+         x.style.background="yellow";
+     }
+     function myBlurFuction(){
+         x.style.background="white";
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+    //     let x=document.getElementById("myinput");
+     
+    //  x.addEventListener('focus', myFocusFunction);
+    //  x.addEventListener('blur', myBlurFuction);
+    //  x.addEventListener('change', function(){
+    //      console.log(this.value);
+    //  });
+
+    //  function myFocusFunction(){
+    //      x.style.background="yellow";
+    //  }
+    //  function myBlurFuction(){
+    //      x.style.background="white";
+    //  }
+    </script>
+</body>
+</html>-->
+
+
+---------------------------------------------------------
+
+<!-- Navigator objects 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // console.log(navigator.appName);
+        // console.log(navigator.appVersion);
+        // console.log(navigator.appCodeName);
+        // console.log(navigator.cookieEnabled);//enable hoga to true varna false
+        // console.log(navigator.userAgent);
+        // console.log(navigator.platform);
+
+        //screen object//isse ham jan sakte hai screen ka height aur width kitna hai
+        // console.log(screen.height);
+      
+
+
+        </script>
+</body>
+</html> -->
+
+
+--------------------------------------------------------------
+<!-- Project 1 Temperature converter  first project complete
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        body{
+            padding: 50px 100px ;
+        }
+        h1{
+            text-align: center;
+        }
+        #container{
+            text-align: center;
+            background-color: aqua;
+            padding: 5px;
+        }
+        .input-div{
+            display: inline-block;
+        }
+        .inp{
+            padding: 5px 10px;
+            margin: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            width: 250px;
+          
+            text-align: center;
+
+        }
+label{
+   font-size: 30px;
+   
+}
+
+    </style>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <div id="container">
+        <div class="input-div">
+            <label>Celsius</label><br>
+            <input type="number"value="0"id="cel"class="inp">
+        </div>
+        <div class="input-div">
+            <label>Fahrenheit</label><br>
+            <input type="number"value="32"id="fah"class="inp">
+        </div>
+    
+    </div>
+    <script>
+        var cel=document.getElementById("cel");
+        var fah=document.getElementById("fah");
+        cel.addEventListener('input', function(){
+           let c=this.value; //aise value get karte hai
+           let f=( c*9/5)+32;
+           if(!Number.isInteger(f)){//yaha f isliye lagaya kiyoki fehranhite ke value ko chang karna tha
+               f=f.toFixed(4);//ye function hai isse decimal ke 4 digit tak he value ayegi
+               fah.value=f;//yaha fah ka value change karke bas f kar rahe hai   
+           }
+          
+
+        });
+        fah.addEventListener('input', function(){
+            let f=this.value;
+            let b=(f - 32) * 5/9; 
+           
+            if(!Number.isInteger(b)){//yaha b  isliye lagaya celcius value b me store ho rahi hai
+             b=b.toFixed(4);
+             cel.value=b;
+            }
+});
+    </script>
+</body>
+</html>-->
+
+
+----------------------------------------------------------------<!-- Project 2 Word Counter  
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Word Counter.</title>
+        <style>
+            body{
+                padding: 50px 100px;
+    
+            }
+            h1{
+                text-align: center;
+                background-color: #0067b0;
+                color:white;
+                padding:10px;
+                margin: 0;
+            }
+           #textbox{
+                width: 99.7%;
+                border-color: #0067b0;
+                font-size: 15px;
+            }
+            p{
+                text-align: center;
+                background-color:  #0067b0;
+                font-size: 25px;
+                font-weight: bold;
+                color: white;
+                padding: 10px;
+                margin: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Word and character counter</h1>
+        
+        <textarea id="textbox" cols="30" rows="10"></textarea>
+        <p>
+            <span id="word">0</span>words and
+            <span id="char">0</span>  character
+        </p>
+        <script>
+            let textbox=document.getElementById("textbox");
+            textbox.addEventListener('input',function(){
+            var text=this.value;//isse textarea ka value mil jayega
+            let char=text.length;//isse ham text ka legth jan sakte hai
+            
+           document.getElementById("char").innerHTML=char;
+           text=text.trim();
+           let words=text.split(" ");
+           let CleanList=words.filter(function(elm){//ye word.filter filter karta array me se word ko empty nahi print karega only word he filter karega
+            return elm !="";//isse return se remove karega emptye space ko array me se
+            console.log(CleanList);
+           });
+           document.getElementById("word").innerHTML=CleanList.length;
+            });
+    </script>
+    </body>
+    </html>-->
